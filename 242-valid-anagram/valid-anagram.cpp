@@ -6,6 +6,12 @@ public:
         int n = s.size();
         int m = t.size();
 
+        if(n != m)
+        {
+         return false;
+        }
+      
+
         for(int i=0; i<n; i++)
         {
            mpp[s[i]]++;
@@ -19,7 +25,7 @@ public:
 
         for(auto it: mpp)
         {
-            if( (n !=m ) || (it.second != 0) )
+            if(it.second != 0)
             return false;
         }
 
