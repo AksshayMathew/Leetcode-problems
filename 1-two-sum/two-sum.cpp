@@ -18,6 +18,6 @@ public:
         mpp[nums[i]] = i;
       }
 
-      return{};
+      return{};  //return{-1,-1}
     }
 };
