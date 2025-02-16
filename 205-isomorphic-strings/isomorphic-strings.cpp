@@ -16,7 +16,6 @@ public:
             if(ppm.count(c2)!=0 && ppm[c2]!=c1)
             return false;
 
-
              mpp[c1] = c2;
              ppm[c2] = c1;
         }
