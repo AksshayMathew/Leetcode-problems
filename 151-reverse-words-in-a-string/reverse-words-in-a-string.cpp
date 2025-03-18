@@ -12,7 +12,7 @@ public:
         while(i<n && s[i]==' ')
          i++;
 
-        if(i>=n)
+        if(i==n)
         break;
          
          
