@@ -10,10 +10,7 @@ public:
             char c1 = s[i];
             char c2 = t[i];
 
-            if(mpp.count(c1)!=0 && mpp[c1]!=c2)
-            return false;
-
-            if(ppm.count(c2)!=0 && ppm[c2]!=c1)
+            if ((mpp.count(c1)!=0 && mpp[c1]!=c2) || (ppm.count(c2)!=0 && ppm[c2]!=c1))
             return false;
 
              mpp[c1] = c2;
