@@ -26,13 +26,13 @@ public:
         for(int j=n-2;j>=0;j--)
         {
            
-            if(mpp[s[j]] >= mpp[s[j+1]])
+            if(mpp[s[j]] < mpp[s[j+1]])
             {
-                res += mpp[s[j]];
+                res -= mpp[s[j]];
             }
             else
             {
-                res -= mpp[s[j]];
+                res += mpp[s[j]];
             }
 
         }
