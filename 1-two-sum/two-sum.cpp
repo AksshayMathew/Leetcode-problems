@@ -9,7 +9,7 @@ public:
       {
     
         int rem = target - nums[i];
-        
+
         if(mpp.find(rem) != mpp.end())
         {
             return {mpp[rem],i};
@@ -18,6 +18,6 @@ public:
         mpp[nums[i]] = i;
       }
 
-      return{};  //return{-1,-1}
+      return{-1,-1};
     }
 };
