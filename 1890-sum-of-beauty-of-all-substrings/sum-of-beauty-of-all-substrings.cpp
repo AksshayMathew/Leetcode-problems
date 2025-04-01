@@ -24,8 +24,8 @@ public:
                   mini = min(mini,cnt);
                }
 
-                int beauty = maxi - mini;
-                res = res+beauty; 
+                // int beauty =
+                res = res+ maxi - mini;
         }
           
      }
