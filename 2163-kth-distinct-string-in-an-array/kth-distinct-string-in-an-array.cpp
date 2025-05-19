@@ -4,10 +4,10 @@ public:
     {
         unordered_map<string,int> mpp;
 
-        for(auto it: arr)
+        for(auto &it: arr)
         mpp[it]++;
 
-        for(auto it: arr)
+        for(auto &it: arr)
         {
             
             if(mpp[it] == 1)
