@@ -12,6 +12,12 @@ public:
            nums[val] = -nums[val];  
         }
 
+        //  for (int num : nums) {
+        //     int i = abs(num) - 1;
+        //     nums[i] = -abs(nums[i]);
+        // }
+
+
         for(int i=0; i<n; i++)
         {
             if(nums[i] > 0)
