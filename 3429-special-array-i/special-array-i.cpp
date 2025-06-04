@@ -10,7 +10,6 @@ public:
             if(curr == prev)
             {
               return false;
-              break;
             }
             
         }
