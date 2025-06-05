@@ -9,7 +9,7 @@ public:
             mpp[nums[i]]++;
         }
 
-        for(auto &it:mpp)
+        for(auto it:mpp)
         {
             if(it.second % 2 != 0)
             return false;
