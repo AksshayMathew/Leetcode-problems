@@ -11,7 +11,7 @@ public:
             mpp[c]++;
         }
 
-        for(auto it:words)
+        for(auto &it:words)
         {
             bool good = true;
             unordered_map<char,int> temp;
