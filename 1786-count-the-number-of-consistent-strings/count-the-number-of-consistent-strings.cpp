@@ -14,7 +14,7 @@ public:
         {
             unordered_map<char,int> temp;
             bool flag = true;
-            for(char i:it)
+            for(char &i:it)
             {
                 temp[i]++;
                 if(temp[i]>0 && mpp[i]==0)
