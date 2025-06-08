@@ -15,6 +15,8 @@ public:
             if(s[i] != exp_one)
             cnt_start_one++;
 
+            //    res = min(cnt_start_zero,cnt_start_one); - WRONG
+
        }
        
        res = min(cnt_start_zero,cnt_start_one);
