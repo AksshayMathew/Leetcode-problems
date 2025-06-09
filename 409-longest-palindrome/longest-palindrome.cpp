@@ -18,11 +18,9 @@ public:
               if(mpp[c1] % 2 != 0)
             {
                 res+=1;
-                break;
+                break;  //only one required
             }
         }
-
-        return res;
-        
+        return res; 
     }
 };
