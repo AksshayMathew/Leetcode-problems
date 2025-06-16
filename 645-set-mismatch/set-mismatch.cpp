@@ -2,29 +2,32 @@ class Solution {
 public:
     vector<int> findErrorNums(vector<int>& nums) 
     {
+        unordered_map<int,int> mpp;
         int n = nums.size();
-        unordered_map<int, int> mpp;
-        int duplicate = 0, missing = 0;
-
-        for(int c:nums)
+        int twice = -1, miss = -1;
+        for(int i=0; i<n; i++) 
         {
-            mpp[c]++;
+            mpp[nums[i]]++;
         }
 
-        for(int i=1;i<=n;i++)   //  NOT FROM 0 TO N
+        for(int i=1; i<=n; i++)  //i=0 to n  doesnt work
         {
             if(mpp[i] == 2)
             {
-               duplicate = i;
+                twice = i;
             }
+
+
             if(mpp[i] == 0)
             {
-               missing = i;
+                miss = i;
             }
 
-        }
 
-        return {duplicate,missing};
+        }  
+
+        return {twice, miss};
+
 
         
     }
