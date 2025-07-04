@@ -3,22 +3,17 @@ public:
     int specialArray(vector<int>& nums) 
     {
         int n = nums.size();
-        // vector<int> vec(n+1,0);
         unordered_map<int,int>mpp;
         int res = 0;
 
         for(int i=0; i<n; i++)
         {
-              int index = min(n,nums[i]);
-            //   vec[index]++;
+            int index = min(n,nums[i]);
             mpp[index]++;
         }
       
-
-
         for(int i=n; i>=0; i--)
         {
-            // res+=vec[i];
             res+=mpp[i];
             if(res == i)
             return i;
