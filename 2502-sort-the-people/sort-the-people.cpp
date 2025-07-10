@@ -2,21 +2,23 @@ class Solution {
 public:
     vector<string> sortPeople(vector<string>& names, vector<int>& heights) 
     {
-        unordered_map<int,string> mpp;
-        int n = heights.size();
-        for(int i=0; i<n; i++)
-        {
-            mpp[heights[i]] = names[i];
+        int n = names.size();
+        vector<pair<int, string>> people;
+
+        for (int i = 0; i < n; i++) {
+            people.push_back({heights[i], names[i]});
         }
-        sort(heights.rbegin(), heights.rend());
+
+        // Sort by height in descending order
+        sort(people.begin(), people.end(), [](auto &a, auto &b) {
+            return a.first > b.first;
+        });
 
         vector<string> ans;
-        for(int i=0; i<n; i++)
-        {
-            ans.push_back(mpp[heights[i]]);
+        for (auto &it : people) {
+            ans.push_back(it.second);
         }
 
         return ans;
     }
-    
 };
