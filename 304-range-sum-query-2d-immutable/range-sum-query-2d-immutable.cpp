@@ -5,8 +5,8 @@ class NumMatrix {
 public:
     NumMatrix(vector<vector<int>>& matrix) 
     {
-       int r = matrix.size();   
-       int c = matrix[0].size();
+       r = matrix.size();   
+       c = matrix[0].size();
 
         matSum = vector<vector<int>>(r+1,vector<int>(c+1));
 
