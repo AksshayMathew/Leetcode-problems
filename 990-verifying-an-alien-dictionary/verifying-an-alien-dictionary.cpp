@@ -10,8 +10,8 @@ public:
 
         for(int i=0; i<words.size()-1; i++)
         {
-            string a = words[i];
-            string b = words[i+1];
+            string &a = words[i];
+            string &b = words[i+1];
 
             int n = min(a.length(), b.length());
 
