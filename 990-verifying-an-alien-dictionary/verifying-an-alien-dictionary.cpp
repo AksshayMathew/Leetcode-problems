@@ -15,7 +15,7 @@ public:
 
             int n = min(a.length(), b.length());
 
-            bool different = false;
+            bool same = true;
             for(int j=0; j<n; j++)
             {
                 if(a[j] != b[j])
@@ -24,12 +24,12 @@ public:
                     {
                       return false;
                     }
-                    different = true;
+                    same = false;
                     break;
 
                 }
             }
-            if(!different && a.size()>b.size())
+            if(same && a.size()>b.size())
             {
                 return false;
             }
